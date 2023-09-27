@@ -7,5 +7,8 @@
   "devDependencies": {
     "mocha": "^10.2.0",
     "nyc": "^15.1.0"
-  }
+  },
+    "scripts": {
+    "start": "cd api && node index.js"
+    }
 }
