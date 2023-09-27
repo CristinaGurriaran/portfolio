@@ -1,12 +1,12 @@
 const {
-    validators: { validateId },
+    validators: { validateText },
     errors: { ExistenceError }
 } = require('com')
 
 const { User, Workspot } = require('../../data/models');
 
 module.exports = (userId , nameSearched) => {
-    validateId(nameSearched, 'user id')
+    validateText(nameSearched, 'workspot name')
 
     return (async () => {
         const user = await User.findById(userId).lean()
