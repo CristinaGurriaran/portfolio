@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.19.2",
     "com": "file:../com",
     "dotenv": "^16.3.1",
     "react": "^18.2.0",
@@ -28,6 +29,6 @@
     "eslint-plugin-react-refresh": "^0.3.4",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
-    "vite": "^4.3.0"
+    "vite": "^4.4.9"
   }
 }
