@@ -4,7 +4,7 @@
     "description": "",
     "main": "api/index.js",
     "scripts": {
-      "start": "node .",
+      "start": "node api/index.js",
       "watch": "node --watch .",
       "inspect": "node --inspect-brk .",
       "test": "mocha logic/**/*.spec.js",
