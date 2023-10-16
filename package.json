@@ -2,9 +2,9 @@
     "name": "roamdesk",
     "version": "1.0.0",
     "description": "",
-    "main": "api/index.js",
+    "main": "roamdesk/api/index.js",
     "scripts": {
-      "start": "node api/index.js",
+      "start": "node roamdesk/api/index.js",
       "watch": "node --watch .",
       "inspect": "node --inspect-brk .",
       "test": "mocha logic/**/*.spec.js",
