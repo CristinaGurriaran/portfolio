@@ -61,7 +61,7 @@ const features = {
     }
 }
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGODB_URL_URI)
     .then(() => getFilteredWorkspots(userId, {districts, category, features}))
     .then(workspots => console.log(workspots))
     .catch(error => console.error(error))

@@ -4,7 +4,7 @@ const { User, Workspot } = require('../../../data/models')
 const updateUserPassword = require('../updateUserPassword')
 
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGODB_URL_URI)
     .then(() => Promise.all([User.deleteMany(), Workspot.deleteMany()]))
     .then(() => User.create({ name: 'pepito.grillo', email: 'pepito@grillo.com', password: '123123123' }))
     .then(user => updateUserPassword(user.id, '123123123', '234234234', '234234234'))

@@ -24,7 +24,8 @@ const {
 
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGODB_URL)
+
     .then(() => {
         const api = express()
 

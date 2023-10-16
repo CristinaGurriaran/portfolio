@@ -69,7 +69,7 @@ const features = {
     }
 }
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGODB_URL_URI)
     .then(() => createWorkspot(userId, image, name, location, description, category, features))
     .then(console.log)
     .catch(error => console.error(error))

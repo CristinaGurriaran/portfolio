@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const { User, Post } = require('../../data/models')
 const retrieveWorkspots = require('./retrieveWorkspots')
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGODB_URL_URI)
     .then(() => User.create({ name: 'pepita.grillo', email: 'pepita@grillo.com', password: '123123123' }))
     .then((user) => retrieveWorkspots(user.id))
     .then(workspots => console.log(workspots))

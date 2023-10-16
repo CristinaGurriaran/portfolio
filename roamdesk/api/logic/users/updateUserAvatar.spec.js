@@ -11,7 +11,7 @@ const updateUserAvatar = require('./updateUserAvatar')
 describe('updateUserAvatar', () => {
     before(async () => {
         await mongoose.connect(
-            `${process.env.MONGODB_URL}${process.env.DATABASE_TEST}`
+            `${process.env.MONGODB_URI || process.env.MONGODB_URL_URI}${process.env.DATABASE_TEST}`
         )
     })
 
