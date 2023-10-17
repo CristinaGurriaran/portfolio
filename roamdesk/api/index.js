@@ -27,6 +27,7 @@ const mongoose = require('mongoose')
 mongoose.connect(process.env.MONGODB_URI || process.env.MONGODB_URL)
 
     .then(() => {
+        console.log("connection succeded")
         const api = express()
 
         const jsonBodyParser = bodyParser.json()
